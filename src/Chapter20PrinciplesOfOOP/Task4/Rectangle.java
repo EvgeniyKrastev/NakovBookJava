@@ -1,12 +1,12 @@
 package Chapter20PrinciplesOfOOP.Task4;
 
-public class Rectangle extends Shape{
+class Rectangle extends Shape {
 
-    public Rectangle(double width, double height) {
+    Rectangle(double width, double height) {
         super(width, height);
     }
 
-    public double calculateSurface(){
-        return (getHeight()*getWidth());
+    double calculateSurface() {
+        return (getHeight() * getWidth());
     }
 }

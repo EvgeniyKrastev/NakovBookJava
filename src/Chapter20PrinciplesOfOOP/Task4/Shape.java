@@ -1,31 +1,31 @@
 package Chapter20PrinciplesOfOOP.Task4;
 
-public  class Shape {
+class Shape {
    private double width;
    private double height;
 
-    public Shape(double width, double height) {
+     Shape(double width, double height) {
         this.width = width;
         this.height = height;
     }
 
-    public double getHeight() {
+     double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+     void setHeight(double height) {
         this.height = height;
     }
 
-    public double getWidth() {
+     double getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+     void setWidth(double width) {
         this.width = width;
     }
 
-    public double calculateSurface(){
+     double calculateSurface(){
         return 0;
     }
 

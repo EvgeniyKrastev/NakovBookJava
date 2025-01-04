@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  * Single responsability - един клас или метод да има само една отговорност
  * В този клас слагам само задачите свързани с тази глава
  */
-class Chapter13CharacterStrings {
+public class Chapter13CharacterStrings {
     /*--------------------------Примери от главата-----------------------------*/
 
     //Класът java.lang.String позволява обработка на символни низове в Java.
