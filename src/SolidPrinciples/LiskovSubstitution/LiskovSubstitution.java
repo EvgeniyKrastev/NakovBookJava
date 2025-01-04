@@ -43,29 +43,9 @@
 // за да избегнеш проблема.
 
 
-interface Bird {
-    void eat();
-}
 
-interface FlyingBird extends Bird {
-    void fly();
-}
 
-class Sparrow extends FlyingBird {
-    @Override
-    void eat(){
-        System.out.println("Sparrow is eating!");
-    }
 
-    @Override
-    void fly(){
-        System.out.println("Sparrow is flying!");
-    }
-}
 
-class Pinguin  implements Bird {
-    @Override
-    void eat(){
-        System.out.println("Pinguin is eating!");
-    }
-}
+
+
