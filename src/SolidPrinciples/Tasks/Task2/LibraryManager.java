@@ -37,10 +37,10 @@ class LibraryManager {
     public static void main(String[] args) {
 
         // Добавете книги в библиотеката (физически и електронни).
-        addBook(new Book("The three questions", "Jorge Bucay"));
-        addBook(new PhysicalBook("The art of communicating"," Jim Stowal","3 column, Shelf 4"));
-        addBook(new EBook("Technical manual Ford", "Ford Company", "ford.com"));
-        addBook(new AudioBook("Mathematica for 9th grade", "Archimed",
+        addBook(new Book(" \"The three questions\" ", " \"Jorge Bucay\" "));
+        addBook(new PhysicalBook(" \"The art of communicating\" "," \"Jim Stowal\" ","3 column, Shelf 4"));
+        addBook(new EBook(" \"Technical manual Ford\" ", " \"Ford Company\"", "ford.com"));
+        addBook(new AudioBook(" \"Mathematica for 9th grade\" ", " \"Archimed\" ",
                 23));
 
         //Създайте читател с лимит от 2 книги.
