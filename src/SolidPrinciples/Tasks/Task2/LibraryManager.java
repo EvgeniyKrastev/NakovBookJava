@@ -12,7 +12,7 @@ class LibraryManager {
     }
 
     static void lendBook(Reader reader, Book book){
-        if((reader.currentBooks.size()<reader.limitOfBooks)
+        if(reader.currentBooks.size()<reader.limitOfBooks
                 & !reader.currentBooks.contains(book)){
             reader.currentBooks.add(book);
             System.out.println(book.Title + " Added successfully! ");
@@ -44,7 +44,6 @@ class LibraryManager {
 
         //Създайте читател с лимит от 2 книги.
         Reader evgo = new Reader("Evgo", books.get(0));
-        //evgo.setCurrentBooks(books.get(2));
         Reader joro = new Reader("Joro", books.get(1));
         Reader ivo = new Reader("Ivo", books.get(3));
 
