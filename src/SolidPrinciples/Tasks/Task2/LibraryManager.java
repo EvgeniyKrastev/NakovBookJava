@@ -29,6 +29,7 @@ class LibraryManager {
             reader.currentBooks.remove(book);
             System.out.println(book.Title + " Returned successfully! ");
         }else{
+            System.out.println(reader.Name+ "dont have this book" + book.getTitle());
             throw new NoSuchElementException();
         }
     }
@@ -53,7 +54,8 @@ class LibraryManager {
 
         //Върнете книга и заемете друга.
 
-        returnBook(evgo, evgo.currentBooks.get(1));
+        // tuk raboti kato e books.get(0) a ako e evgo.contains.get(0) dava gre6ka
+        returnBook(evgo, books.get(0));
 
         lendBook(evgo, books.get(1));
 
