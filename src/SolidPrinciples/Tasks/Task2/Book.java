@@ -11,19 +11,19 @@ public class Book implements BookAttributes{
 
     @Override
     public String getAuthor() {
-        return Author;
+        return this.Author;
     }
 
     @Override
     public String getTitle() {
-        return Title;
+        return this.Title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.Title = title;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        this.Author = author;
     }
 }

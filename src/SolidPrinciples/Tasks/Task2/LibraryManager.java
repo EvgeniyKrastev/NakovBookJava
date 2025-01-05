@@ -3,6 +3,7 @@ package SolidPrinciples.Tasks.Task2;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 class LibraryManager {
     static List<Book> books = new ArrayList<>();
@@ -34,13 +35,56 @@ class LibraryManager {
         }
     }
 
+    static void searchForBook() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Въведете 1 за търсене по заглавие или 2 за търсене по автор:");
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Поглъщане на новия ред след число
+
+        if (choice == 1) {
+            System.out.println("Въведете заглавие на книгата:");
+            String titleToSearch = scanner.nextLine();
+
+            boolean found = false;
+            for (Book book : books) {
+                if (book.getTitle().trim().equalsIgnoreCase(titleToSearch.trim())) {
+                    System.out.println("Намерена книга: " + book.getTitle() + " от " + book.getAuthor());
+                    found = true;
+                }
+            }
+
+            if (!found) {
+                System.out.println("Не е намерена книга със заглавие \"" + titleToSearch + "\".");
+            }
+        } else if (choice == 2) {
+            System.out.println("Въведете име на автор:");
+            String authorToSearch = scanner.nextLine();
+
+            boolean found = false;
+            for (Book book : books) {
+                if (book.getAuthor().trim().equalsIgnoreCase(authorToSearch.trim())) {
+                    System.out.println("Намерена книга: " + book.getTitle() + " от " + book.getAuthor());
+                    found = true;
+                }
+            }
+
+            if (!found) {
+                System.out.println("Не е намерена книга от автор \"" + authorToSearch + "\".");
+            }
+        } else {
+            System.out.println("Невалиден избор. Опитайте отново.");
+            throw new IllegalArgumentException("Невалиден избор за търсене");
+        }
+    }
+
     public static void main(String[] args) {
 
         // Добавете книги в библиотеката (физически и електронни).
-        addBook(new Book(" \"The three questions\" ", " \"Jorge Bucay\" "));
-        addBook(new PhysicalBook(" \"The art of communicating\" "," \"Jim Stowal\" ","3 column, Shelf 4"));
-        addBook(new EBook(" \"Technical manual Ford\" ", " \"Ford Company\"", "ford.com"));
-        addBook(new AudioBook(" \"Mathematica for 9th grade\" ", " \"Archimed\" ",
+        addBook(new Book("The three questions", "Jorge Bucay"));
+        addBook(new PhysicalBook("The art of communicating","Jim Stowal","3 column, Shelf 4"));
+        addBook(new EBook("Technical manual Ford", "Ford Company", "ford.com"));
+        addBook(new AudioBook("Mathematica for 9th grade", "Archimed",
                 23));
 
         //Създайте читател с лимит от 2 книги.
@@ -61,6 +105,8 @@ class LibraryManager {
 
         //Разширение на задачата:
         // 1. Добавете функция за търсене на книга по автор или заглавие.
+
+        searchForBook();
         // 2. Реализирайте логика за различно време на заемане на физически
         // и електронни книги.
         // 3. Позволете добавяне на нов тип книга като "специална колекция",
