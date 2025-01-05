@@ -5,7 +5,7 @@ import java.util.List;
 
 class Reader {
     String Name;
-    final int limitOfBooks = 1;
+    final int limitOfBooks = 2;
     List<Book> currentBooks= new ArrayList<>();
     // ако я няма инициализацията new ArrayList дава грешка.
     // най добре е или при декларация или в конструктора да се инициализира.

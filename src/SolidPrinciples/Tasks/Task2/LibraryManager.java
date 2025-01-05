@@ -12,8 +12,8 @@ class LibraryManager {
     }
 
     static void lendBook(Reader reader, Book book){
-        if((reader.limitOfBooks<reader.currentBooks.size())
-                && !reader.currentBooks.contains(book)){
+        if((reader.currentBooks.size()<reader.limitOfBooks)
+                & !reader.currentBooks.contains(book)){
             reader.currentBooks.add(book);
             System.out.println(book.Title + " Added successfully! ");
         }else{
